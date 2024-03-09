@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:myapp/utils.dart';
 
-class Scene extends StatelessWidget {
+class FormSubmitted extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 307;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
+
+    // Function to navigate back two pages
+    void _navigateBackTwice(BuildContext context) {
+      int count = 0;
+      Navigator.popUntil(context, (route) {
+        return count++ == 2;
+      });
+    }
+
     return Container(
       width: double.infinity,
       child: Container(
@@ -67,6 +75,10 @@ class Scene extends StatelessWidget {
                   height: 1.1725 * ffem / fem,
                   color: Color(0x7f000000),
                 ),
+              ),
+              ElevatedButton(
+                onPressed: () => _navigateBackTwice(context),
+                child: Text('Go Back'),
               ),
             ],
           ),

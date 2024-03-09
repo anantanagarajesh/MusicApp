@@ -13,14 +13,14 @@ class Scene extends StatelessWidget {
       width: double.infinity,
       child: Container(
         // openingpageGVV (156:4)
-        padding: EdgeInsets.fromLTRB(89 * fem, 186 * fem, 89 * fem, 126 * fem),
+        padding: EdgeInsets.fromLTRB(50 * fem, 126 * fem, 50 * fem, 126 * fem),
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment(0, -1),
             end: Alignment(0, 1),
             colors: <Color>[
-              Color.fromARGB(255, 0, 56, 19),
+              Color.fromARGB(255, 1, 94, 32),
               Color.fromARGB(255, 45, 189, 86)
             ],
             stops: <double>[0.511, 1],
@@ -37,9 +37,9 @@ class Scene extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: SafeGoogleFont(
                   'Lexend',
-                  fontSize: 35 * ffem,
+                  fontSize: 40 * ffem,
                   fontWeight: FontWeight.w400,
-                  height: 1.25 * ffem / fem,
+                  height: 1.5 * ffem / fem,
                   color: Color(0xffffffff),
                   letterSpacing: 2 * fem,
                 ),
@@ -47,7 +47,7 @@ class Scene extends StatelessWidget {
             ),
             Container(
               // openingphoto1aAj (157:16)
-              margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 0 * fem, 78 * fem),
+              margin: EdgeInsets.fromLTRB(0 * fem, 50 * fem, 0 * fem, 78 * fem),
               width: 264 * fem,
               height: 264 * fem,
               child: Image.asset(

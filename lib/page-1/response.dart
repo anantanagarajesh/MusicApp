@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:myapp/page-1/form-submitted.dart';
 
 class FeedbackPage extends StatefulWidget {
   @override
@@ -111,6 +112,10 @@ class _FeedbackPageState extends State<FeedbackPage> {
                       _formKey.currentState!.save();
                       _storeFeedback(_responses); // Store feedback in Firestore
                     }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => FormSubmitted()),
+                    );
                   },
                   child: Text('Submit'),
                 ),
